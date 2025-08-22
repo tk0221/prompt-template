@@ -60,11 +60,33 @@ Add your Git repositories here to provide code context to AI assistants. For mul
 ```
 repos/
 ├── service_1/
-│   ├── service-api/
-│   └── service-frontend/
-└── service_2/
-    ├── backend/
-    └── mobile-app/
+├── service_2-mobile/
+├── service_3-api/
+├── service_4-backend/
+├── raw/
+│   ├── architecture/
+│   │   ├── design-docs/
+│   │   └── system-diagrams/
+│   ├── meetings/
+│   │   └── team-notes/
+│   └── specifications/
+│       ├── technical-specs/
+│       └── requirements/
+├── knowledge/
+│   ├── company/
+│   │   ├── acronyms.md
+│   │   └── terminology.md
+│   ├── processes/
+│   │   └── workflows.md
+│   └── standards/
+│       └── guidelines.md
+└── personal/
+    ├── daily/
+    │   └── YYYY-MM-DD.md
+    ├── learning/
+    │   └── til.md
+    └── tasks/
+        └── in-progress.md
 ```
 
 ### 1. Raw Knowledge (`raw/`)
