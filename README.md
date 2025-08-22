@@ -125,13 +125,3 @@ Track individual work progress and maintain context continuity:
 ## Contributing
 
 This template is designed to be adapted to your team's specific needs. Feel free to modify the folder structure and processes to match your workflow and organizational requirements.
-
-Here is a simple flow chart:
-
-```mermaid
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-```
