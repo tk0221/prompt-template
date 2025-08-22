@@ -9,24 +9,25 @@ This template addresses common limitations of pre-trained language models in ent
 ### Without CAKE - Generic Responses
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': { 'fontSize': '14px' }}}%%
+%%{init: {'theme':'base', 'themeVariables': { 'fontSize': '14px', 'fontFamily': 'arial', 'background': '#ffffff' }}}%%
 graph TD
     A1["Developer Question"] --> B1["LLM Processing"]
     B1 --> D1["Generic Response"]
     D1 --> E1["Manual Follow-up"]
     E1 --> F1["Result"]
     
-    style A1 fill:#f9f9f9,font-size:14px
-    style B1 font-size:14px
-    style D1 font-size:14px
-    style E1 font-size:14px
-    style F1 fill:#ff9999,font-size:14px
+    style A1 fill:#ffffff,stroke:#333,font-size:14px
+    style B1 fill:#ffffff,stroke:#333,font-size:14px
+    style D1 fill:#ffffff,stroke:#333,font-size:14px
+    style E1 fill:#ffffff,stroke:#333,font-size:14px
+    style F1 fill:#ff9999,stroke:#333,font-size:14px
 ```
+
 
 ### With CAKE - Context-Aware Responses
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': { 'fontSize': '14px' }}}%%
+%%{init: {'theme':'base', 'themeVariables': { 'fontSize': '14px', 'fontFamily': 'arial', 'background': '#ffffff' }}}%%
 graph TD
     A2["Developer Question"] --> B2["CAKE System"]
     B2 --> C2["Knowledge Retrieval"]
@@ -37,15 +38,15 @@ graph TD
     E2 --> F2["Actionable Response"]
     F2 --> G2["Result"]
     
-    style A2 fill:#f9f9f9,font-size:14px
-    style B2 font-size:14px
-    style C2 font-size:14px
-    style C22 font-size:14px
-    style C222 font-size:14px
-    style D2 font-size:14px
-    style E2 font-size:14px
-    style F2 font-size:14px
-    style G2 fill:#99ff99,font-size:14px
+    style A2 fill:#ffffff,stroke:#333,font-size:14px
+    style B2 fill:#ffffff,stroke:#333,font-size:14px
+    style C2 fill:#ffffff,stroke:#333,font-size:14px
+    style C22 fill:#ffffff,stroke:#333,font-size:14px
+    style C222 fill:#ffffff,stroke:#333,font-size:14px
+    style D2 fill:#ffffff,stroke:#333,font-size:14px
+    style E2 fill:#ffffff,stroke:#333,font-size:14px
+    style F2 fill:#ffffff,stroke:#333,font-size:14px
+    style G2 fill:#99ff99,stroke:#333,font-size:14px
 ```
 
 **Inspired by Burke Holland's prompt engineering work**: https://gist.github.com/burkeholland
