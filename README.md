@@ -6,16 +6,16 @@ A GitHub template repository designed to enhance AI assistant interactions with 
 
 This template addresses common limitations of pre-trained language models in enterprise environments, including outdated training data and lack of domain-specific knowledge such as company acronyms, team terminology, and project-specific context.
 
-```
+```mermaid
 graph TD
- subgraph subGraph0["WITHOUT CAKE"]
+    subgraph subGraph0["WITHOUT CAKE"]
         B1["LLM Processing"]
         A1["Developer Question"]
         D1["Generic Response"]
         E1["Manual Follow-up"]
         F1["Result"]
-  end
- subgraph subGraph1["WITH CAKE"]
+    end
+    subgraph subGraph1["WITH CAKE"]
         A2["Developer Question"]
         B2["CAKE System"]
         C2["Knowledge Retrieval"]
@@ -25,15 +25,15 @@ graph TD
         E2["Enhanced Prompt"]
         F2["Actionable Response"]
         G2["Result"]
-  end
+    end
     A1 --> B1
     B1 --> D1
     D1 --> E1
     E1 --> F1
     A2 --> B2
     C2 --> D2
-    C22--> C2
-    C222--> C2
+    C22 --> C2
+    C222 --> C2
     B2 --> C2 
     D2 --> E2
     E2 --> F2
