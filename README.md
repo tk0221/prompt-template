@@ -6,42 +6,46 @@ A GitHub template repository designed to enhance AI assistant interactions with 
 
 This template addresses common limitations of pre-trained language models in enterprise environments, including outdated training data and lack of domain-specific knowledge such as company acronyms, team terminology, and project-specific context.
 
+### Without CAKE - Generic Responses
+
 ```mermaid
+%%{init: {'theme':'base', 'themeVariables': { 'fontSize': '14px' }}}%%
 graph TD
-    subgraph subGraph0["WITHOUT CAKE"]
-        B1["LLM Processing"]
-        A1["Developer Question"]
-        D1["Generic Response"]
-        E1["Manual Follow-up"]
-        F1["Result"]
-    end
-    subgraph subGraph1["WITH CAKE"]
-        A2["Developer Question"]
-        B2["CAKE System"]
-        C2["Knowledge Retrieval"]
-        C22["check /knowledge"]
-        C222["check /personal"]
-        D2["Context Assembly"]
-        E2["Enhanced Prompt"]
-        F2["Actionable Response"]
-        G2["Result"]
-    end
-    A1 --> B1
-    B1 --> D1
-    D1 --> E1
-    E1 --> F1
-    A2 --> B2
-    C2 --> D2
-    C22 --> C2
-    C222 --> C2
-    B2 --> C2 
-    D2 --> E2
-    E2 --> F2
-    F2 --> G2
-    style A1 fill:#f9f9f9
-    style F1 fill:#ff9999
-    style A2 fill:#f9f9f9
-    style G2 fill:#99ff99
+    A1["Developer Question"] --> B1["LLM Processing"]
+    B1 --> D1["Generic Response"]
+    D1 --> E1["Manual Follow-up"]
+    E1 --> F1["Result"]
+    
+    style A1 fill:#f9f9f9,font-size:14px
+    style B1 font-size:14px
+    style D1 font-size:14px
+    style E1 font-size:14px
+    style F1 fill:#ff9999,font-size:14px
+```
+
+### With CAKE - Context-Aware Responses
+
+```mermaid
+%%{init: {'theme':'base', 'themeVariables': { 'fontSize': '14px' }}}%%
+graph TD
+    A2["Developer Question"] --> B2["CAKE System"]
+    B2 --> C2["Knowledge Retrieval"]
+    C2 --> D2["Context Assembly"]
+    C22["check /knowledge"] --> C2
+    C222["check /personal"] --> C2
+    D2 --> E2["Enhanced Prompt"]
+    E2 --> F2["Actionable Response"]
+    F2 --> G2["Result"]
+    
+    style A2 fill:#f9f9f9,font-size:14px
+    style B2 font-size:14px
+    style C2 font-size:14px
+    style C22 font-size:14px
+    style C222 font-size:14px
+    style D2 font-size:14px
+    style E2 font-size:14px
+    style F2 font-size:14px
+    style G2 fill:#99ff99,font-size:14px
 ```
 
 **Inspired by Burke Holland's prompt engineering work**: https://gist.github.com/burkeholland
