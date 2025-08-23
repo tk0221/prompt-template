@@ -28,6 +28,8 @@ graph TD
 %%{init: {'theme':'base', 'themeVariables': { 'fontSize': '14px', 'fontFamily': 'arial', 'background': '#ffffff' }}}%%
 graph TD
     A2["Question:<br/>'How should I structure this API endpoint?'"] --> B2["CAKE System"]
+    B2 --> P["Check prompt.md"] --> K["Check /knowledge folder"] --> B2
+    P --> PERSONAL["Check /personal folder"] --> B2
     B2 --> C2["API Gateway Config"]
     B2 --> C3["Auth Service Patterns"]
     B2 --> C4["Response Templates"]
