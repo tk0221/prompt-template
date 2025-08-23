@@ -11,16 +11,14 @@ This template addresses common limitations of pre-trained language models in ent
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': { 'fontSize': '14px', 'fontFamily': 'arial', 'background': '#ffffff' }}}%%
 graph TD
-    A1["Developer Question"] --> B1["LLM Processing"]
-    B1 --> D1["Generic Response"]
-    D1 --> E1["Manual Follow-up"]
-    E1 --> F1["Result"]
+    A1["Question:<br/>'How should I structure this API endpoint?'"] --> B1["Standard REST Principles"]
+    B1 --> C1["'Use HTTP verbs correctly<br/>Return proper status codes<br/>Use JSON responses'"]
+    C1 --> D1["Doesn't Match:<br/>Company API gateway<br/>Authentication patterns<br/>Response formats"]
     
-    style A1 fill:#ffffff,stroke:#333,font-size:14px
-    style B1 fill:#ffffff,stroke:#333,font-size:14px
-    style D1 fill:#ffffff,stroke:#333,font-size:14px
-    style E1 fill:#ffffff,stroke:#333,font-size:14px
-    style F1 fill:#ff9999,stroke:#333,font-size:14px
+    style A1 fill:#ffffff,stroke:#333,font-size:12px
+    style B1 fill:#ffffff,stroke:#333,font-size:12px
+    style C1 fill:#ffffff,stroke:#333,font-size:12px
+    style D1 fill:#ff9999,stroke:#333,font-size:12px
 ```
 
 
@@ -29,24 +27,25 @@ graph TD
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': { 'fontSize': '14px', 'fontFamily': 'arial', 'background': '#ffffff' }}}%%
 graph TD
-    A2["Developer Question"] --> B2["CAKE System"]
-    B2 --> C2["Knowledge Retrieval"]
-    C2 --> D2["Context Assembly"]
-    C22["check /knowledge"] --> C2
-    C222["check /personal"] --> C2
-    D2 --> E2["Enhanced Prompt"]
-    E2 --> F2["Actionable Response"]
-    F2 --> G2["Result"]
+    A2["Question:<br/>'How should I structure this API endpoint?'"] --> B2["CAKE System"]
+    B2 --> C2["API Gateway Config"]
+    B2 --> C3["Auth Service Patterns"]
+    B2 --> C4["Response Templates"]
+    C2 --> D2["Contextual Guidance"]
+    C3 --> D2
+    C4 --> D2
+    D2 --> E2["'Use /api/v2/ prefix<br/>Implement JWT middleware<br/>Follow ResponseWrapper<T> pattern<br/>Include correlationId header'"]
+    E2 --> F2["Consistent with<br/>Existing Services"]
     
-    style A2 fill:#ffffff,stroke:#333,font-size:14px
-    style B2 fill:#ffffff,stroke:#333,font-size:14px
-    style C2 fill:#ffffff,stroke:#333,font-size:14px
-    style C22 fill:#ffffff,stroke:#333,font-size:14px
-    style C222 fill:#ffffff,stroke:#333,font-size:14px
-    style D2 fill:#ffffff,stroke:#333,font-size:14px
-    style E2 fill:#ffffff,stroke:#333,font-size:14px
-    style F2 fill:#ffffff,stroke:#333,font-size:14px
-    style G2 fill:#99ff99,stroke:#333,font-size:14px
+    style A2 fill:#ffffff,stroke:#333,font-size:12px
+    style B2 fill:#ffffff,stroke:#333,font-size:12px
+    style C2 fill:#e6f3ff,stroke:#333,font-size:12px
+    style C3 fill:#e6f3ff,stroke:#333,font-size:12px
+    style C4 fill:#e6f3ff,stroke:#333,font-size:12px
+    style D2 fill:#ffffff,stroke:#333,font-size:12px
+    style E2 fill:#ffffff,stroke:#333,font-size:12px
+    style F2 fill:#99ff99,stroke:#333,font-size:12px
+
 ```
 
 **Inspired by Burke Holland's prompt engineering work**: https://gist.github.com/burkeholland
